@@ -8,7 +8,7 @@ import {isFunctionResultDecodingError} from './abi/abi.support'
 import * as erc721 from './abi/erc721'
 import {BigNumber} from 'ethers'
 
-export const CONTRACT_ADDRESS = '0x86ef335cb0ada3c681ec4240ef6520c407adeb0b'
+export const CONTRACT_ADDRESS = '0xac5c7493036de60e63eb81c5e9a440b42f47ebf5'
 
 let database = new TypeormDatabase()
 let processor = new EvmBatchProcessor()
@@ -17,7 +17,7 @@ let processor = new EvmBatchProcessor()
         chain: 'https://rpc.ankr.com/eth',
     })
     .setBlockRange({
-        from: 15_972_766 ,
+        from: 15_584_000 ,
     })
     .addLog(CONTRACT_ADDRESS, {
         filter: [[erc721.events.Transfer.topic]],
