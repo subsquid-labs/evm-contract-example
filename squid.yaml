@@ -2,7 +2,7 @@ manifestVersion: subsquid.io/v0.1
 name: contract-calls-example
 version: 1
 description: |-
-  Basic example of processing evm logs 
+  Basic example of processing data with contract state fetching
 build:
 
 deploy:
