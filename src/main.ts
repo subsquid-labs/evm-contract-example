@@ -84,6 +84,7 @@ async function processTransfers(ctx: Context, transfersData: TransferEvent[]) {
             let uri = await contract.tokenURI(transferData.tokenIndex)
             token = new Token({
                 id: tokenId,
+                index: transferData.tokenIndex,
                 uri,
             })
             tokens.set(token.id, token)
