@@ -106,7 +106,7 @@ async function processTransfers(ctx: Context, transfersData: TransferEvent[]) {
         transfers.push(transfer)
     }
 
-    await ctx.store.save([...owners.values()])
-    await ctx.store.save([...tokens.values()])
-    await ctx.store.save(transfers)
+    await ctx.store.upsert([...owners.values()])
+    await ctx.store.upsert([...tokens.values()])
+    await ctx.store.upsert(transfers)
 }
