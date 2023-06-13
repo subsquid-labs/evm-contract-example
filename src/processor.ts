@@ -14,7 +14,7 @@ export const CONTRACT_ADDRESS = '0xac5c7493036de60e63eb81c5e9a440b42f47ebf5'
 
 export const processor = new EvmBatchProcessor()
     .setDataSource({
-        archive: 'https://v2.archive.subsquid.io/network/ethereum-mainnet',
+        archive: lookupArchive('eth-mainnet'),
         chain: 'https://rpc.ankr.com/eth',
     })
     .setFinalityConfirmation(10)
